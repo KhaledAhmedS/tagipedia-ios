@@ -14,7 +14,7 @@ pod 'Tagipedia', :git => "https://github.com/tagipedia/tagipedia-ios.git"
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     Tagipedia *newTBuilder =[[Tagipedia alloc] initWithClientId:@"CLIENT_ID" clientSecret:@"CLIENT_SECRET" identifer:@"IDENTIFIER" UUID:@"UUID"];
     newTBuilder.onNotificationPressed = ^(NSDictionary *data) {
-        NSLog(@"topic %@", data[@"topic"]);
+        NSLog(@"AD Topic %@", data[@"ad_data"]);
         // push your view controller here
         // or show ad dialog with its assigned template
         // YOU SHOULD PASS YOUR NAVIGATION CONTROLLER
@@ -46,9 +46,16 @@ pod 'Tagipedia', :git => "https://github.com/tagipedia/tagipedia-ios.git"
 ```plist
 <key>NSLocationWhenInUseUsageDescription</key>
 <string>This is the plist item for NSLocationWhenInUseUsageDescription</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>This is the plist item for NSLocationAlwaysUsageDescription</string>
 <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 <string>This is the plist item for NSLocationAlwaysAndWhenInUseUsageDescription</string>
 ```
 
+## Hint: to show ad with its assigned template.
+
+```objc
+ [TUtil showAdDialog:data navigation: self.window.rootViewController];
+```
 ## Sample code
 https://github.com/tagipedia/tagipedia-ios-sample
