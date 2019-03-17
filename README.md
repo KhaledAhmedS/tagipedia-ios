@@ -42,7 +42,7 @@ pod 'Tagipedia', :git => "https://github.com/tagipedia/tagipedia-ios.git"
     };
     [newTBuilder build];
     //to register user with interests
-    //this will show ads based on matching between ad interest and user interest otherwise it will show ads that was created without interests
+    //this will show ads based on matching between ad interests and user interests otherwise it will show ads that was created without interests
     [Tagipedia identifyUser:@"USER_NAME" UUID:@"UUID" interests:[NSArray arrayWithObjects:@"INTEREST", @"INTEREST", ..., nil]];
     return YES;
 }
