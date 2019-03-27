@@ -10,7 +10,3 @@
 typedef void (^ onNotificationPressed)(NSDictionary *data);
 
 typedef void (^ onLoggedEventRecord)(NSDictionary *data);
-
-typedef void (^ onMapButtonPressedRecord)(NSDictionary *data);
-
-

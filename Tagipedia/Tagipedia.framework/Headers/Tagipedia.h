@@ -11,7 +11,6 @@
 @interface Tagipedia : NSObject
 @property onNotificationPressed onNotificationPressed;
 @property onLoggedEventRecord onLoggedEventRecord;
-@property onMapButtonPressedRecord onMapButtonPressedRecord;
 
 @property NSString *clientId;
 @property NSString *clientSecret;
@@ -23,9 +22,6 @@
 + (void)applicationDidEnterBackground;
 - (void)setSameBeaconNotifyPeriod:(double)sameBeaconNotifyPeriod;
 - (void)setDifferentBeaconNotifyPeriod:(double)differentBeaconNotifyPeriod;
-+ (void)logOutUser;
-+ (void)identifyUser:(NSString*) userName UUID:(NSString*) uuid interests:(NSArray*)interests;
-
 
 @end
 
